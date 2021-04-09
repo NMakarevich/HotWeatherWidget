@@ -1,0 +1,7 @@
+<div class="temperatur">
+  <h5>{{hotelList[selectedIndex].weather.title}}</h5>
+  <span class="w-line"> </span>
+  <img [src]="'../../assets/img/weather/' + hotelList[selectedIndex].weather.icon + '.png'" alt="">
+  <h2>{{hotelList[selectedIndex].weather.temperature}}<sup class="degree">°</sup></h2>
+  <h6>Water {{hotelList[selectedIndex].weather.water}}<sup class="degree">°</sup></h6>
+</div>

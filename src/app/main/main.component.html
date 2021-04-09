@@ -1,0 +1,24 @@
+<div class="element-left">
+  <div class="element-bg-img"><img [src]="hotelList[selectedIndex].img" alt="" class="img-responsive"></div>
+  <div class="element-left-bottom">
+    <div class="ele-strip">
+      <ul>
+        <ng-container *ngFor="let type of types; last as isLast;">
+          <li *ngIf="!isLast" (click)="country = type"><a href="##">{{type}}</a></li>
+          <li *ngIf="isLast" class="anc-bor" (click)="country = type"><a href="##">{{type}}</a></li>
+        </ng-container>
+      </ul>
+    </div>
+    <div class="village">
+      <h3>Hotels</h3>
+      <span class="line"> </span>
+      <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+          <div *ngFor="let hotel of hotelList  | countryFilter: country">
+            <app-card [hotel]="hotel" (click)="newIndex.emit(getIndex(hotel))"></app-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
