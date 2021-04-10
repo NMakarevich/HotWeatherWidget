@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Input, ViewEncapsulation} from '@angular/core';
 import {IHotelList} from "../../mock/hotelList";
 
 @Component({
@@ -7,17 +7,11 @@ import {IHotelList} from "../../mock/hotelList";
   styleUrls: ['./weather.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class WeatherComponent implements OnInit {
+export class WeatherComponent {
 
   @Input()
   public hotelList: IHotelList[];
 
   @Input()
   public selectedIndex: number;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

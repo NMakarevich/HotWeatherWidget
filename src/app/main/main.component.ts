@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angular/core';
 import {IHotelList, typesArr} from "../../mock/hotelList";
 
 @Component({
@@ -25,5 +25,4 @@ export class MainComponent {
     this.selectedIndex = this.hotelList.indexOf(hotel);
     return this.selectedIndex;
   }
-
 }

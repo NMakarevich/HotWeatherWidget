@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Input, ViewEncapsulation} from '@angular/core';
 import {IHotelList} from "../../../mock/hotelList";
 
 @Component({
@@ -7,14 +7,8 @@ import {IHotelList} from "../../../mock/hotelList";
   styleUrls: ['./card.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
 
   @Input()
   public hotel: IHotelList;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
